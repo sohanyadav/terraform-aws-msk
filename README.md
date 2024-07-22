@@ -124,7 +124,7 @@ Replace **MIT** and **sohanyadav** with the appropriate license and your informa
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|-----|:--------:|
+|------|-------------|------|---------|:--------:|
 | <a name="input_broker_node_client_subnets"></a> [broker\_node\_client\_subnets](#input\_broker\_node\_client\_subnets) | A list of subnets to connect to in client VPC ([documentation](https://docs.aws.amazon.com/msk/1.0/apireference/clusters.html#clusters-prop-brokernodegroupinfo-clientsubnets)) | `list(string)` | `[]` | no |
 | <a name="input_broker_node_ebs_volume_size"></a> [broker\_node\_ebs\_volume\_size](#input\_broker\_node\_ebs\_volume\_size) | The size in GiB of the EBS volume for the data drive on each broker node | `number` | `null` | no |
 | <a name="input_broker_node_instance_type"></a> [broker\_node\_instance\_type](#input\_broker\_node\_instance\_type) | Specify the instance type to use for the kafka brokers. e.g. kafka.m5.large. ([Pricing info](https://aws.amazon.com/msk/pricing/)) | `string` | `null` | no |
@@ -152,10 +152,8 @@ Replace **MIT** and **sohanyadav** with the appropriate license and your informa
 | <a name="input_kafka_broker_number"></a> [kafka\_broker\_number](#input\_kafka\_broker\_number) | Kafka brokers per zone | `number` | `1` | no |
 | <a name="input_kafka_version"></a> [kafka\_version](#input\_kafka\_version) | Version of Kafka brokers | `string` | `"2.2.1"` | no |
 | <a name="input_label_order"></a> [label\_order](#input\_label\_order) | Label order, e.g. `name`,`application`. | `list(any)` | <pre>[<br>  "name",<br>  "environment"<br>]</pre> | no |
-| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy, eg 'sohanyadav' | `string` | `"example"`| no |
-| <a name="input_msk_cluster_enabled"></a> [msk\_cluster\_enabled](#input\_msk\_cluster\_enabled) | Flag to control the msk-cluster creation. | `bool` | `true` | no |
-| <a name="input_name"></a> [name](#input\_name) | Name  (e.g. `app` or `cluster`). | `string` | `""`| no |
-| <a name="input_node_exporter_enabled"></a> [node\_exporter\_enabled](#input\_node\_exporter\_enabled) | Indicates whether you want to enable or disable the Node Exporter | `bool` | `false` | no |
+| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy, eg 'sohanyadav' | `string` | `"example"` | no || <a name="input_msk_cluster_enabled"></a> [msk\_cluster\_enabled](#input\_msk\_cluster\_enabled) | Flag to control the msk-cluster creation. | `bool` | `true` | no |
+| <a name="input_name"></a> [name](#input\_name) | Name  (e.g. `app` or `cluster`). | `string` | `""` | no || <a name="input_node_exporter_enabled"></a> [node\_exporter\_enabled](#input\_node\_exporter\_enabled) | Indicates whether you want to enable or disable the Node Exporter | `bool` | `false` | no |
 | <a name="input_s3_logs_bucket"></a> [s3\_logs\_bucket](#input\_s3\_logs\_bucket) | Name of the S3 bucket to deliver logs to | `string` | `null` | no |
 | <a name="input_s3_logs_enabled"></a> [s3\_logs\_enabled](#input\_s3\_logs\_enabled) | Indicates whether you want to enable or disable streaming broker logs to S3 | `bool` | `false` | no |
 | <a name="input_s3_logs_prefix"></a> [s3\_logs\_prefix](#input\_s3\_logs\_prefix) | Prefix to append to the folder name | `string` | `null` | no |
